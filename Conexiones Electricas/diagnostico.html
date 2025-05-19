@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico de Fallas</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        @keyframes typing {
+            from { width: 0; }
+            to   { width: 100%; }
+        }
+        @keyframes blink-caret {
+            50% { border-color: transparent; }
+        }
+        .typing {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid #4CAF50;
+            width: 0;
+            animation:
+                typing 4s steps(40, end) forwards,
+                blink-caret 0.7s step-end infinite;
+        }
+    </style>
+</head>
+<body background="fondo l.jpg">
+    <header>
+        <h1> 🔍Diagnóstico de Fallas en tu Circuito Eléctrico🔍</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Bienvenida</a></li>
+                <li><a href="mantenimiento.html">Tipos de Crcuitos Eléctricos</a></li>
+                <li><a href="diagnostico.html">Diagnóstico de Fallas</a></li>
+                <li><a href="galeria.html">Galería de Imágenes</a></li>
+                <li><a href="examen.html">Realizar Evaluación</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+                <li><a href="juegos.html">Juegos</a></li>
+                <li><a href="enlaces.html">Enlaces</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="diagnostico">
+        <h2 class="typing">¿Tu circuito no funciona correctamente?</h2>
+        <p>Puede incluir fallas como cortocircuitos, conexiones sueltas, componentes dañados o errores de diseño.</p>
+        <ul>
+            <li><strong>✔️Inspección visual:</strong> Buscar cables sueltos, rotos, quemados o componentes dañados, verificar que todo esté bien conectado.</li>
+            <li><strong>✔️Revisar la fuente de energía::</strong> Comprobar que la batería o la fuente esté funcionando correctamente.</li>
+            <li><strong>✔️Probar los componentes:</strong> Cambiar focos, resistencias o interruptores sospechosos, usar componentes nuevos si es necesario.</li>
+            <li><strong>✔️Usar herramientas de medición:</strong> Multímetro: mide voltaje, corriente y continuidad para saber si algo está desconectado o dañado.</li>
+            <li><strong>✔️Revisar conexiones en serie y en paralelo:</strong> En serie: si un componente falla, todo el circuito se apaga, en paralelo: si algo falla, los otros componentes deben seguir funcionando.</li>
+
+        </ul>
+        <p><a href="mantenimiento.html">Revisa como funciona cada tipo de circuito.</a></p>
+        <img src="reparaciones-electronicas.jpg" alt="Imagen 1" class="imagen-diagnostico" />
+    </section>
+</body>
+</html>

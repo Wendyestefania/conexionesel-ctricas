@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería de Imágenes</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @keyframes typing {
+      from { width: 0; }
+      to   { width: 100%; }
+    }
+    @keyframes blink-caret {
+      50% { border-color: transparent; }
+    }
+    .typing {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 3px solid #4CAF50;
+      width: 0;
+      animation:
+        typing 4s steps(40, end) forwards,
+        blink-caret 0.7s step-end infinite;
+    }
+  </style>
+</head>
+<body background="fondog.avif">
+
+  <header>
+    <h1>📷Galería de Circuitos Electricos📷</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Bienvenida</a></li>
+        <li><a href="mantenimiento.html">Tipos de Conexiones Eléctricas</a></li>
+        <li><a href="diagnostico.html">Diagnóstico de Fallas</a></li>
+        <li><a href="galeria.html">Galería de Imágenes</a></li>
+        <li><a href="examen.html">Realizar Evaluación</a></li>
+        <li><a href="contactos.html">Contacto</a></li>
+        <li><a href="juegos.html">Juegos</a></li>
+        <li><a href="enlaces.html">Enlaces</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="galeria">
+    <h2 class="typing">Imágenes de Circuitos Eléctricos</h2>
+    <div class="image-gallery">
+      <img src="conexion1.jpg" alt="Limpieza de computadora"class="conexion1">
+      <img src="Conexion2.jpg" alt="Diagnóstico de computadora"class="imageng-dos">
+      <img src="conexion4.jpg" alt="Mantenimiento de hardware"class="imageng-tres">
+      <img src="circuito3.jpg" alt="Mantenimiento de hardware"class="imageng-cuatro">
+      <img src="circuito5.jpg" alt="Mantenimiento de hardware"class="imageng-cinco">
+      <img src="circuito11.jpg" alt="Mantenimiento de hardware"class="imageng-seis">
+      <img src="circuito6.jpg" alt="Mantenimiento de hardware"class="imageng-siete">
+      <img src="circuito7.jpg" alt="Mantenimiento de hardware"class="imageng-ocho">
+      <img src="circuito8.webp" alt="Mantenimiento de hardware"class="imageng-nueve">
+      <img src="circuito10.webp" alt="Mantenimiento de hardware"class="imageng-diez">
+    </div>
+    
+  </section>
+
+</body>
+</html>
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @keyframes typing {
+          from { width: 0; }
+          to   { width: 100%; }
+        }
+        @keyframes blink-caret {
+          50% { border-color: transparent; }
+        }
+        .typing {
+          overflow: hidden;
+          white-space: nowrap;
+          border-right: 3px solid #4CAF50;
+          width: 0;
+          animation:
+            typing 4s steps(40, end) forwards,
+            blink-caret 0.7s step-end infinite;
+        }
+      </style>
+</head>
+<body background="fondoindex.jpg">
+    <header>
+      <h1>🎮Juegos🎮</h1>  
+
+        <nav >
+            <ul>
+                <li><a href="index.html">Bienvenida</a></li>
+                <li><a href="mantenimiento.html">Tipos de Circuitos Eléctricos</a></li>
+                <li><a href="diagnostico.html">Diagnóstico de Fallas</a></li>
+                <li><a href="galeria.html">Galería de Imágenes</a></li>
+                <li><a href="examen.html">Realizar Evaluacion</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+                <li><a href="juegos.html">Juegos</a></li>
+                <li><a href="enlaces.html">Enlaces</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="juego">
+        <h2 class="typing">Juega y diviertete aprendiendo</h2>
+        
+        <center><iframe src="https://scratch.mit.edu/projects/1176073944/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></center>
+        
+</body>
+</html>

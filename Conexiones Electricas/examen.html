@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exámen sobre Circuitos Electricos</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @keyframes typing {
+          from { width: 0; }
+          to   { width: 100%; }
+        }
+        @keyframes blink-caret {
+          50% { border-color: transparent; }
+        }
+        .typing {
+          overflow: hidden;
+          white-space: nowrap;
+          border-right: 3px solid #4CAF50;
+          width: 0;
+          animation:
+            typing 4s steps(40, end) forwards,
+            blink-caret 0.7s step-end infinite;
+        }
+      </style>
+</head>
+<body background="fondot.jpg">
+    <header>
+        <h1>📝Examen: Circuitos Eléctricos📝</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Bienvenida</a></li>
+                <li><a href="mantenimiento.html">Tipos de Circuitos Eléctricos</a></li>
+                <li><a href="diagnostico.html">Diagnóstico de Fallas</a></li>
+                <li><a href="galeria.html">Galería de Imágenes</a></li>
+                <li><a href="examen.html">Realizar Evaluación</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+                <li><a href="juegos.html">Juegos</a></li>
+                <li><a href="enlaces.html">Enlaces</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="examen">
+        <h2 class="typing">Completa el examen para evaluar tus conocimientos🤵</h2>
+
+        <form id="formulario-examen">
+            <fieldset>
+                <legend>Información Personal</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preguntas de Circuitos</legend>
+                <p>1. ¿Qué es un circuito eléctrico?</p>
+                <label><input type="radio" name="pregunta1" value="a" required> Una red de computadoras</label><br>
+                <label><input type="radio" name="pregunta1" value="b"> Un camino cerrado por donde circula la corriente eléctrica</label><br>
+                <label><input type="radio" name="pregunta1" value="c"> Una conexión de cables sin corriente</label><br><br>
+
+                <p>2. ¿Qué pasa si se abre un circuito?</p>
+                <label><input type="radio" name="pregunta2" value="a" required>  La corriente fluye más rápido</label><br>
+                <label><input type="radio" name="pregunta2" value="b"> El circuito se vuelve más brillante</label><br>
+                <label><input type="radio" name="pregunta2" value="c"> La corriente se detiene</label><br><br>
+
+                <p>3. ¿Qué sucede en un circuito en serie si se quita una bombilla?</p>
+                <label><input type="radio" name="pregunta3" value="a" required> Todas las bombillas se apagan</label><br>
+                <label><input type="radio" name="pregunta3" value="b"> El circuito sigue funcionando igual</label><br>
+                <label><input type="radio" name="pregunta3" value="c"> Aumenta el voltaje</label><br><br>
+            </fieldset>
+
+            <button type="submit">Enviar Respuestas</button>
+            <button type="reset">Limpiar Formulario</button>
+        </form>
+
+        <div id="resultado" style="margin-top: 20px; font-weight: bold;"></div>
+    </section>
+
+    <script>
+    document.getElementById("formulario-examen").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        let respuestasCorrectas = {
+            pregunta1: "b",
+            pregunta2: "c",
+            pregunta3: "a"
+        };
+
+        let puntaje = 0;
+        let total = 3;
+        let mensaje = "";
+
+        for (let clave in respuestasCorrectas) {
+            let seleccionada = document.querySelector(`input[name="${clave}"]:checked`);
+            if (seleccionada) {
+                if (seleccionada.value === respuestasCorrectas[clave]) {
+                    puntaje++;
+                    mensaje += `✅ ${clave}: ¡Correcto!<br>`;
+                } else {
+                    mensaje += `❌ ${clave}: Incorrecto. Respuesta correcta: <strong>${respuestasCorrectas[clave]}</strong><br>`;
+                }
+            } else {
+                mensaje += `⚠️ ${clave}: No respondida.<br>`;
+            }
+        }
+
+        let nota = (puntaje / total) * 10;
+        mensaje += `<br><strong>Puntaje final: ${puntaje} de ${total}</strong><br>`;
+        mensaje += `<strong>Nota: ${nota.toFixed(1)} / 10</strong>`;
+
+        document.getElementById("resultado").innerHTML = mensaje;
+    });
+    </script>
+</body>
+</html>

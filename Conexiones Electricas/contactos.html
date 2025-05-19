@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantenimiento de Computadoras</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family:'Times New Roman', Times, serif;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+        }
+
+        section {
+            background-color: rgba(197, 73, 114, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+        }
+
+        #mensaje-confirmacion {
+            margin-top: 15px;
+            font-weight: bold;
+            color: rgb(175, 197, 175);
+            text-align: center;
+        }
+    </style>
+</head>
+<body background="fondoc.jpg">
+    <header>
+        <h1 style="text-align: center;">📧Contactos📧</h1>
+        <nav>
+            <ul style="text-align: center;">
+                <li><a href="index.html">Bienvenida</a></li>
+                <li><a href="mantenimiento.html">Tipos de Circuitos Eléctricos</a></li>
+                <li><a href="diagnostico.html">Diagnóstico de Fallas</a></li>
+                <li><a href="galeria.html">Galería de Imágenes</a></li>
+                <li><a href="examen.html">Realizar Evaluación</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+                <li><a href="juegos.html">Juegos</a></li>
+                <li><a href="enlaces.html">Enlaces</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2 style="text-align: center;">🌐Contáctanos🌐</h2>
+            <p>Si tienes alguna pregunta o necesitas ayuda profesional, llena el siguiente formulario:</p>
+            <form id="formulario-contacto">
+                <label for="name">Nombre:</label><br>
+                <input type="text" id="name" name="name" placeholder="Tu nombre" required><br><br>
+                <label for="email">Correo Electrónico:</label><br>
+                <input type="email" id="email" name="email" placeholder="Tu correo" required><br><br>
+                <label for="message">Mensaje:</label><br>
+                <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí" required></textarea><br><br>
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="mensaje-confirmacion"></div>
+            <h2>Autor:</h2>
+    <li>Wendy Estefanía Gutiérrez Flores</li>
+
+    
+        </section>
+    </div>
+
+    <script>
+        document.getElementById("formulario-contacto").addEventListener("submit", function(e) {
+            e.preventDefault();
+            document.getElementById("mensaje-confirmacion").innerHTML = "✅ Tu mensaje ha sido enviado correctamente.";
+            this.reset();
+        });
+    </script>
+    
+</body>
+</html>
